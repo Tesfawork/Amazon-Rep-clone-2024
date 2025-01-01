@@ -1,0 +1,129 @@
+/** @format */
+
+/* .container {
+  background-color: #efeeee;
+  padding: 30px;
+}
+.orders__container {
+  background-color: #fff;
+  padding: 20px;
+}
+.orders__container h2 {
+  border-bottom: 2px solid var(--primary-shade);
+  padding: 20px;
+}
+.orders__container p {
+  padding: 12px;
+}
+.orders__container img {
+  width: 100px !important;
+}
+.orders__container div {
+  height: auto !important;
+} */
+
+/* review  */
+
+/** @format */
+
+/* General Container Styling */
+.container {
+  background-color: #efeeee;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.orders__container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.orders__container h2 {
+  border-bottom: 2px solid var(--primary-shade);
+  padding: 10px 0;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.orders__container p {
+  padding: 12px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Order Cards */
+.orders__container > div {
+  padding: 15px 0;
+}
+
+.orders__container > div hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.orders__container img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .orders__container {
+    padding: 15px;
+  }
+
+  .orders__container h2 {
+    font-size: 20px;
+  }
+
+  .orders__container p {
+    font-size: 13px;
+  }
+
+  .orders__container img {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .orders__container {
+    padding: 10px;
+  }
+
+  .orders__container h2 {
+    font-size: 18px;
+  }
+
+  .orders__container p {
+    font-size: 12px;
+  }
+
+  .orders__container img {
+    width: 70px;
+  }
+
+  .orders__container > div hr {
+    margin: 15px 0;
+  }
+}

@@ -1,0 +1,75 @@
+/**
+ * .hero_img {
+ *     position: relative;
+ * }
+ * 
+ * .hero_img::before {
+ *     content: "";
+ *     position: absolute;
+ *     bottom: 0px;
+ *     width: 100%;
+ *     height: 300px;
+ *     background-image: linear-gradient(to bottom,
+ *             rgba(225, 225, 225, 0) rgba(225, 225, 225));
+ * }
+ *
+ * @format
+ */
+
+/* review */
+
+.hero_img {
+  position: relative;
+  width: 100%; /* Ensures the image or container spans full width */
+  height: auto; /* Maintains aspect ratio */
+  overflow: hidden; /* Prevents overflow issues on smaller screens */
+}
+
+.hero_img::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(225, 225, 225, 0),
+    rgba(225, 225, 225, 1) /* Ensure gradient becomes solid */
+  );
+  z-index: 1; /* Places gradient above the image */
+}
+
+/* Carousel Styling */
+.carousel {
+  position: relative;
+  width: 100%; /* Spans the full width of the parent container */
+  margin: 0 auto; /* Centers the carousel */
+}
+
+.carousel img {
+  width: 100%; /* Ensures images are responsive */
+  height: auto; /* Maintains image aspect ratio */
+  object-fit: cover; /* Keeps images visually appealing */
+  border-radius: 10px; /* Adds subtle rounding for a modern look */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero_img::before {
+    height: 200px; /* Reduces gradient size for smaller screens */
+  }
+
+  .carousel img {
+    border-radius: 5px; /* Smaller border radius on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero_img::before {
+    height: 150px; /* Further reduction for mobile */
+  }
+
+  .carousel img {
+    border-radius: 0; /* Removes rounding for a clean mobile design */
+  }
+}

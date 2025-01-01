@@ -1,0 +1,150 @@
+/** @format */
+
+/* .category {
+  height: 350px;
+  width: 350px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.category img {
+  width: 100%;
+  object-fit: contain;
+  max-height: 250px;
+  padding: 0 10px;
+}
+
+.category a {
+  text-decoration: none;
+  color: rgb(35, 35, 35);
+}
+
+.category h2,
+.category p {
+  padding: 5px;
+  margin-left: 15px;
+}
+
+.category p {
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(9, 132, 209);
+}
+
+.category_container {
+  position: relative;
+  margin-top: -10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  max-width: 1600px;
+  gap: 50px;
+  place-items: center;
+} */
+
+/* General Styling for Category Cards */
+.category {
+  height: 350px;
+  width: 90%; /* Change from fixed 350px to relative width for better scaling */
+  max-width: 350px; /* Ensures it doesn't grow beyond the original size */
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px; /* Adds a modern touch */
+  overflow: hidden; /* Ensures content fits within the box */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category:hover {
+  transform: scale(1.05); /* Adds a hover effect for user interaction */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.category img {
+  width: 100%;
+  object-fit: cover; /* Ensure image covers the designated space */
+  max-height: 250px;
+  padding: 0 10px;
+  border-bottom: 2px solid #f0f0f0; /* Separates the image visually */
+}
+
+.category a {
+  text-decoration: none;
+  color: rgb(35, 35, 35);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns content neatly */
+}
+
+.category h2,
+.category p {
+  padding: 5px;
+  margin-left: 15px;
+}
+
+.category h2 {
+  font-size: 1.2em; /* Scales with the viewport */
+}
+
+.category p {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: rgb(9, 132, 209);
+  margin-top: auto; /* Pushes text to the bottom of the card */
+}
+
+/* Category Container Styling */
+.category_container {
+  position: relative;
+  margin-top: -10%;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* More flexible */
+  max-width: 1600px;
+  gap: 30px; /* Reduced gap for better compactness */
+  padding: 20px; /* Adds breathing space around the grid */
+  justify-content: center; /* Centers the grid horizontally */
+}
+
+/* Media Queries for Smaller Devices */
+@media (max-width: 768px) {
+  .category {
+    height: 300px;
+    width: 100%; /* Adjusts to fill the available space */
+    max-width: 100%; /* Ensures no overflow */
+  }
+
+  .category img {
+    max-height: 200px;
+    padding: 0; /* Removes padding for smaller screens */
+  }
+
+  .category h2 {
+    font-size: 1em; /* Scales down heading size */
+  }
+
+  .category p {
+    font-size: 0.8em; /* Adjusts text size */
+  }
+
+  .category_container {
+    gap: 20px; /* Tightens spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .category {
+    height: auto; /* Allows dynamic height */
+    padding: 10px; /* Adds some spacing for readability */
+  }
+
+  .category img {
+    max-height: 150px;
+  }
+
+  .category h2,
+  .category p {
+    margin-left: 10px;
+    padding: 5px;
+  }
+}
