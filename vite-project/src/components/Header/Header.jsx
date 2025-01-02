@@ -50,7 +50,7 @@ const Header = () => {
           <div className={style.order_container}>
             <a href="" className={style.language}>
               <img
-                src="https://en.wikipedia.org/wiki/Flag_of_Ethiopia#/media/File:Flag_of_Ethiopia_(Blank).svg"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Ethiopia_%28Blank%29.svg/800px-Flag_of_Ethiopia_%28Blank%29.svg.png"
                 alt=""
               />
               <select name="" id="">

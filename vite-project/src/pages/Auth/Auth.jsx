@@ -1,7 +1,7 @@
 /** @format */
 import { useState, useContext } from "react";
 import { Link, useNavigate, useLocation, redirect } from "react-router-dom";
-import style from "./Auth/module.css";
+import style from "./Auth.module.css";
 import { auth } from "../../Utility/firebase.js";
 import {
   signInWithEmailAndPassword,

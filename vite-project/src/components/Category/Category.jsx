@@ -1,5 +1,3 @@
-/** @format */
-
 import { categoryInfos } from "./CategoryFullInfos";
 import style from "./Category.module.css";
 import CategoryCard from "./CategoryCard";
